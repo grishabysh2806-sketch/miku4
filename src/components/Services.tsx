@@ -18,7 +18,7 @@ export const Services: React.FC<ServicesProps> = ({ content, ui, onNavigate }) =
 
   const handleServiceClick = (id: string) => {
     if (onNavigate) {
-      onNavigate(`/services/${id}`);
+      onNavigate(id);
     } else {
       router.push(`/services/${id}`);
     }

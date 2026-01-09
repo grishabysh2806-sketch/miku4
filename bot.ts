@@ -1,36 +1,36 @@
-import { Bot, InlineKeyboard } from "grammy";
+import { Bot, InlineKeyboard, Context } from "grammy";
 
 const BOT_TOKEN = "7777025779:AAF4RUoraCGS49aw_9XrtO03rvfdFSPLymE";
 const CHANNEL_ID = -1003260726551;
-// Replace this with your actual deployed URL when ready
-const MINI_APP_URL = "https://your-deployed-miniapp-url.com"; 
+// Your direct Telegram Mini App link
+const MINI_APP_URL = "https://t.me/interphaseart_bot/Interphase"; 
 
 const bot = new Bot(BOT_TOKEN);
 
-bot.command("start", async (ctx) => {
+bot.command("start", async (ctx: Context) => {
   const keyboard = new InlineKeyboard()
-    .webApp("Open Interphase", MINI_APP_URL);
+    .url("Открыть Interphase", MINI_APP_URL);
 
-  await ctx.reply("Welcome to Interphase Mini App!", {
+  await ctx.reply("Добро пожаловать в Interphase Mini App!", {
     reply_markup: keyboard,
   });
 });
 
 // For the channel integration, you might want to post a message with a button
-bot.command("post", async (ctx) => {
+bot.command("post", async (ctx: Context) => {
   // Only allow admin or specific users to post to channel
   try {
     const keyboard = new InlineKeyboard()
-      .webApp("Launch App", MINI_APP_URL);
+      .url("Запустить приложение", MINI_APP_URL);
 
-    await bot.api.sendMessage(CHANNEL_ID, "🚀 *Interphase: New Digital Reality*\n\nExplore our full-cycle services directly in Telegram.", {
+    await bot.api.sendMessage(CHANNEL_ID, "🚀 *Interphase: Новая Цифровая Реальность*\n\nИсследуйте наши услуги полного цикла прямо в Telegram.", {
       parse_mode: "Markdown",
       reply_markup: keyboard
     });
-    await ctx.reply("Message posted to channel!");
+    await ctx.reply("Сообщение опубликовано в канале!");
   } catch (error) {
     console.error(error);
-    await ctx.reply("Failed to post message. Make sure the bot is an admin in the channel.");
+    await ctx.reply("Ошибка публикации. Убедитесь, что бот является администратором канала.");
   }
 });
 

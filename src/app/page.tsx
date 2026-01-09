@@ -69,12 +69,14 @@ export default function Home() {
           ui={content.ui}
         />
         
-        <Hero content={content.hero} />
+        <Hero 
+          content={content.hero} 
+          onExplore={() => {
+            const portfolio = document.getElementById('portfolio');
+            portfolio?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        />
         
-        <div id="services">
-          <Services content={content.services} ui={content.ui} />
-        </div>
-
         <div id="about">
           <About 
             content={content.about} 
@@ -88,7 +90,11 @@ export default function Home() {
             }}
           />
         </div>
-        
+
+        <div id="services">
+          <Services content={content.services} ui={content.ui} />
+        </div>
+
         <div id="portfolio">
           <Portfolio content={content.portfolio} />
         </div>

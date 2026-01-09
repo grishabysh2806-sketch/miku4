@@ -183,6 +183,14 @@ export const CONTENT: Record<Language, ContentDictionary> = {
           liveUrl: 'https://ponedelnik-demo.vercel.app/',
           description: 'A digital cultural magazine focusing on visual aesthetics and modern culture.'
         },
+        { 
+          id: '7', 
+          title: '388.nail', 
+          category: 'Beauty & Wellness', 
+          imageUrl: 'https://picsum.photos/800/600?random=7',
+          liveUrl: 'https://388-demo.vercel.app/',
+          description: 'Tropical manicure salon with Bali vibes. A unique digital experience for a modern beauty brand.'
+        },
       ]
     },
     faq: {
@@ -191,7 +199,7 @@ export const CONTENT: Record<Language, ContentDictionary> = {
       items: [
         {
           question: "How long does a project typically take?",
-          answer: "A standard landing page takes 1-2 weeks. Complex multi-page sites or Mini Apps typically require 4-8 weeks depending on the logic and integrations."
+          answer: "A standard project (Landing Page or Mini App) typically takes 5-10 days depending on the logic and integrations."
         },
         {
           question: "Why do you reject site builders?",
@@ -397,6 +405,14 @@ export const CONTENT: Record<Language, ContentDictionary> = {
           liveUrl: 'https://ponedelnik-demo.vercel.app/',
           description: 'Цифровой культурный журнал об эстетике и современной культуре.'
         },
+        { 
+          id: '7', 
+          title: '388.nail', 
+          category: 'Красота и здоровье', 
+          imageUrl: 'https://picsum.photos/800/600?random=7',
+          liveUrl: 'https://388-demo.vercel.app/',
+          description: 'Тропический салон маникюра в атмосфере Бали. Уникальный цифровой опыт для современного бьюти-бренда.'
+        },
       ]
     },
     faq: {
@@ -405,7 +421,7 @@ export const CONTENT: Record<Language, ContentDictionary> = {
       items: [
         {
           question: "Сколько времени занимает разработка проекта?",
-          answer: "Стандартный лендинг занимает 1-2 недели. Сложные многостраничные сайты или Mini Apps — от 4 до 8 недель."
+          answer: "Стандартный проект (лендинг или Mini App) занимает 5-10 дней в зависимости от сложности логики и интеграций."
         },
         {
           question: "Почему вы не используете конструкторы?",
